@@ -1,0 +1,167 @@
+import cmath
+import numpy as np
+
+def calculator_menu():
+    print('\nHello welcome to Ellise Calculator : \n \n kindly select an operation to continue')
+    print("1. Addition")
+    print("2. Substraction")
+    print("3. Division")
+    print("4. Modulo")
+    print("5. Mean")
+    print("6. Quadratic equation")
+    print("7.Simultaneous equation")
+    
+
+calculator_menu()
+
+#recieving  input from user
+print('\nKindly enter the operation you want\n')
+x = input('Enter the corresponding number of the operation you want to use: ' )
+#print( 'The operation number is', x)
+if x != '6' :
+    if x != "7":
+        first_value = int(input("enter the first value :"))
+        second_value = int(input("enter the second value :"))
+        
+
+
+#Addition = first_value + second_value
+
+
+#corresponding_number = [1,2,3,4,5,6]
+#print(corresponding_number)
+corresponding_number = x
+
+if corresponding_number == '1':
+    Addition = (first_value + second_value )
+
+
+    print('i am about to do additon ')
+    print(Addition)
+
+
+
+  
+
+elif corresponding_number == '2':
+
+    if first_value > second_value:
+        print('i am about to do substraction')
+
+        Substraction = (first_value -second_value )
+        print(Substraction)
+
+    elif first_value < second_value:
+        Substraction = (first_value - second_value)
+        print('the answer is a negative number')
+        print(Substraction)
+        
+    
+                    
+
+elif corresponding_number == '3':
+    print('i am about to do division ')
+    Division = first_value / second_value 
+    print(Division)
+
+elif corresponding_number == '4':
+    print('i am about to do modulo')
+
+    #modulo returns the remainder when a number is devided by another number
+    Modulo = first_value % second_value
+    print(Modulo)
+
+  #the mean add the two numbers together and devides them by the number of times they appear
+elif corresponding_number == '5':
+    print('i am about to do mean')
+
+    Mean = (first_value  + second_value)/2
+    print(Mean)
+
+
+
+elif corresponding_number == '6':
+    print('i am about to solve the quadriatic equation\n')
+    #Quadriatic = (-(second_value) + (math.pow((second_value, 2))  - 4*first_value*third_value))/ 2*first_value
+    #print(Quadriatic)
+    def quadriatic_eqn():           
+        a = float(input('enter the coefficient of x square :\n'))
+
+        b = float(input('enter the coeffiecient of x :\n')) 
+ 
+        c = float(input('enter the constant :\n'))
+
+        #this are the coeffiecients of the equation. It will take input from the user 
+        d = (b**2) - 4*a*c
+        print(d)
+        if(d > 0):
+            print('the equation have two real and distinct roots\n')
+        elif(d < 0 ):
+            print('the equation have no real roots\n')
+        elif(d == 0):
+            print('the equation have two real and equal roots\n')
+
+        print('d is the descriminant of the equation\n')
+        #the descriminant describes the nature of the roots
+        root1 = -b + cmath.sqrt(d)
+    
+        root2 = -b - cmath.sqrt(d)
+        print(root1)
+        print(root2)
+        print('these are the roots of the quadriatic equations\n ')
+    quadriatic_eqn()
+elif corresponding_number =="7":
+    def simultaneous_equation():
+        print("ax + by = d ")
+
+        print("bx + cy = e")
+
+        print(" a,b,c,d are coefficient of the variables involved in the equation\n d and e are the constants")
+        print("enter the value of a \n")
+        a = int(input(" a = "))
+
+        print(" enter the value of b \n")
+
+
+        b = int(input(" b = "))
+
+        print(" enter the value of c")
+
+        c = int(input(" c = "))
+
+
+        print(' enter the value of d')
+
+
+        d = int(input(" d = "))
+
+        print(" enter the value of e")
+
+        e = int(input(" e = "))
+
+        print(" enter the value of f")
+
+        f = int(input(" f = "))
+        # the e and f are the consatants of equation1 and equation2 respectively
+
+        A = [[a,b] , [c,d]]
+        B = [e, f]
+        X = np.linalg.solve(A , B)
+        print( X )
+        print("this is the value of x and y respectively")
+simultaneous_equation()
+
+
+        
+
+    
+
+
+ 
+
+
+
+
+
+
+
